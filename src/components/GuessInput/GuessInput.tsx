@@ -1,5 +1,5 @@
 function GuessInput() {
-  return <div></div>;
+  return <div>GuessInput</div>;
 }
 
 export default GuessInput;
