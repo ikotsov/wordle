@@ -24,7 +24,8 @@ function GuessInput() {
         minLength={GUESS_LENGTH}
         pattern={INPUT_PATTERN}
         onChange={(event) => {
-          setGuess(event.target.value.toUpperCase());
+          const guessModified = event.target.value.toUpperCase();
+          setGuess(guessModified);
         }}
       />
     </form>
