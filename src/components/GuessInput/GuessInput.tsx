@@ -4,12 +4,16 @@ import { EMPTY_STRING } from "../../constants";
 const GUESS_LENGTH = 5;
 const INPUT_PATTERN = `[A-Za-z]{${GUESS_LENGTH}}`;
 
-function GuessInput() {
+type Props = {
+  onSubmit: (guess: string) => void;
+};
+
+function GuessInput({ onSubmit }: Props) {
   const [guess, setGuess] = React.useState(EMPTY_STRING);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Guess submitted:", guess);
+    onSubmit(guess);
     setGuess(EMPTY_STRING);
   };
 
